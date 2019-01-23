@@ -35,7 +35,7 @@ def count_elements(array)
 	grouped = array.group_by {|x| x[:name]}
 	grouped.each do |name, amt_of_names|
 		amt_of_names.each do |person|
-			person[:count] ||= amt_of_names.length
+			person[:count] = amt_of_names.length
 			result << person
 		end
 	end
